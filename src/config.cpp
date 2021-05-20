@@ -2,29 +2,7 @@
 
 
 int read_config(std::string& filename, std::unordered_map<std::string, std::string>& config_data) {
-    std::ifstream cfg(filename);
-
-    if (!cfg.is_open()) {
-        return CANNOT_OPEN_FILE;
-    }
-
-    std::string line{};
-    while (std::getline(cfg, line)) {
-        /* If the line contains an equals operator -- we treat it as valid data
-         * std::string::npos means "until the end of the string". */
-        if (line.find('=') != std::string::npos) {
-            // Split data in line into a key and value
-            std::istringstream iss{ line };
-            std::string key{}, value{};
-            /* Operation std::getline(iss, id, ':') extracts a string from the std::istringstream
-             * and assigns it to variable "id".*/
-            if (std::getline(std::getline(iss, key, '=') >> std::ws, value)) {
-                config_data[key] = value;
-            }
-        }
-    }
-    cfg.close();
-    return OK;
+    // TODO: finish read config
 }
 
 
