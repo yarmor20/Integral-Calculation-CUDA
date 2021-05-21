@@ -3,6 +3,7 @@
 Calculating the integral of [Langermann Function](https://www.sfu.ca/~ssurjano/langer.html) using the advantages of CUDA programing.
 
 Team: Yaroslav Morozevych, Denys Herasymuk, Dmytro Lopushanskyy.
+
 Option: 4
 
 ## Runnig the code
